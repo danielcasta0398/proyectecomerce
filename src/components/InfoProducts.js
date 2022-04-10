@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
-import { getProductsInfoThunk, getProductsThunk } from '../redux/actions';
+import { getProductsInfoThunk} from '../redux/actions';
 import Header from './Header';
 import SlidesShow from './SlidesShow';
 
