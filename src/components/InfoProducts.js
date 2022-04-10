@@ -13,7 +13,7 @@ const InfoProducts = () => {
     useEffect( () => {    
         dispatch( getProductsInfoThunk(id) )        
 
-    }, [ id ])
+    }, [ dispatch, id ])
 
     const product = useSelector( state => state.product )
    
