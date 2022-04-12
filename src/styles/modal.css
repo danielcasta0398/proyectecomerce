@@ -9,6 +9,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-top: -0.2rem;
     z-index: 30;
+    
 }
 
 .user{
@@ -50,4 +51,17 @@ form button{
 
   .footer-modal{
       margin: 1rem;
+      display: flex;
+  }
+  
+  .footer-modal p {
+      font-size: 13px;
+      margin-right: 0.3rem;
+  }
+
+  .footer-modal button{
+      border: none;
+      background: none;
+      color: #2fa8f8;
+      font-size: 13px;
   }

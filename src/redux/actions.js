@@ -8,7 +8,8 @@ import axios from "axios"
 export const actions = {
     setProducts: "ADD_PRODUCTS",
     setProduct: 'SET_PRODUCT',
-    setIsLoading: 'SET_IS_LAODING'
+    setIsLoading: 'SET_IS_LAODING',
+    setIsModalLogin: 'SET_IS_MODAL_LOGIN'
 
 }
 
@@ -25,6 +26,11 @@ export const setProduct = product =>({
 export const setIsLoading = isLoading =>({
      type: actions.setIsLoading,
      payload: isLoading
+})
+
+export const setIsModalLogin = isModalLogin =>({
+    type: actions.setIsModalLogin,
+    payload: isModalLogin
 })
 
 
