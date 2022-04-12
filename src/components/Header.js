@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ModalLogin from './ModalLogin';
 
 const Header = () => {
     return (
@@ -10,8 +11,11 @@ const Header = () => {
                   <button><i class="fa-solid fa-user"></i></button>
                   <button><i class="fa-solid fa-box-open"></i></button> 
                   <button><i class="fa-solid fa-cart-shopping"></i></button>     
-                </div>
+                </div>                
             </nav>
+            <div className='modal-card'>
+                    <ModalLogin/>
+            </div>
         </div>
     );
 };
