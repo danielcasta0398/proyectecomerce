@@ -15,8 +15,11 @@ const Home = () => {
 
     return (            
         <div>
-            <Header />            
-            <CardProducts />
+            <Header />  
+            <div className='content-product'>
+             <CardProducts />
+            </div>          
+            
                         
         </div>
     );

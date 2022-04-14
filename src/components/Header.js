@@ -7,11 +7,11 @@ const Header = () => {
     const [ modal, setModal ]= useState(false)
 
     return (
-        <div>
+        <div className='head1'>
             <nav>
                 <Link to='/'> <h2 className='tittle'>e-commerce</h2> </Link> 
                 <div className='buttons-nav'>
-                  <button onClick={ () => setModal(!modal) }><i class="fa-solid fa-user"></i></button>
+                  <button onClick={ () => setModal(!modal) }>  <i className="fa-solid fa-user" style={ modal ? {color:"#f85555"} : {}} ></i></button>
                   <button><i class="fa-solid fa-box-open"></i></button> 
                   <button><i class="fa-solid fa-cart-shopping"></i></button>     
                 </div>                

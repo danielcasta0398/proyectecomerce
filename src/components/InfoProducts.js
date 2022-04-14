@@ -22,37 +22,37 @@ const InfoProducts = () => {
         <div className='data-product'>
             <Header />
             <div className='title-section-product'>
-                <p>Home</p>
-                <div className="separator"></div>
-                <b> {product.title} </b>                             
-                
-            </div>
-            <SlidesShow />
-            <h2 className='title-description'> {product.title} </h2>
-            <div className='infoproduct-price' >
-                <div>
-                    <p>Price:</p>
-                    <b>$ {product.price} </b>
+                    <p>Home</p>
+                    <div className="separator"></div>
+                    <b> {product.title} </b>                             
+                    
                 </div>
-                <div>
-                    <p>Quantity</p>
-                </div>               
+                <SlidesShow />
+                <h2 className='title-description'> {product.title} </h2>
+                <div className='infoproduct-price' >
+                    <div>
+                        <p>Price:</p>
+                        <b>$ {product.price} </b>
+                    </div>
+                    <div>
+                        <p>Quantity</p>
+                    </div>               
 
-            </div>
+                </div>
 
-            <div className='button-cart'>
-              <button className='add-cart'>
-                Add to cart 
-              </button> 
-            </div>
+                <div className='button-cart'>
+                <button className='add-cart'>
+                    Add to cart 
+                </button> 
+                </div>
 
-            <div className='description'>
-                <p>
-                    {
-                        product.description
-                    }
-                </p>
-            </div>
+                <div className='description'>
+                    <p>
+                        {
+                            product.description
+                        }
+                    </p>
+                </div>
              
         </div>
     );
