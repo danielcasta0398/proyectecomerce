@@ -39,7 +39,7 @@ form div input{
     padding: 7px;
 }
 
-form button{  
+.form-modal > button{  
     background-color: var(--primary);
     border: none;
     color: white;
@@ -59,7 +59,7 @@ form button{
       margin-right: 0.3rem;
   }
 
-  .footer-modal button{
+  .footer-modal > button{
       border: none;
       background: none;
       color: #2fa8f8;

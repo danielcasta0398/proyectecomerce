@@ -4,6 +4,7 @@ const INITIAL_STATE = {
 
     products: [],
     product: [],
+    categories: [],
     isLoading: false,
     isModalLogin: false,
 
@@ -34,7 +35,14 @@ const reducer = (state = INITIAL_STATE, action) => {
             return{
                 ...state,
                 isModalLogin: action.payload
-            }  
+            }
+        
+        case actions.setCategories:
+            return{
+                ...state,
+                categories: action.payload
+            }    
+            
 
         default:
             return state;

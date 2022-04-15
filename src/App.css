@@ -50,7 +50,7 @@ a{
   gap: 20px;
 }
 
-.buttons-nav button{
+.buttons-nav > button{
   font-size: 1.5rem;
   background: none;
   border: none;
@@ -207,4 +207,55 @@ a{
 
 a:active{
   color: #4f4f4f;
+}
+
+.search-form{
+  display: flex;
+ 
+}
+
+.search-form > input{
+  width: 100%;
+  border: solid 1px var(--light-gray);  
+ outline: none;
+ border-right: none; 
+ font-size: 1.1rem;
+ padding: 0 0.8rem;
+}
+
+.search-form > input::placeholder{
+  color: var(--gray);
+}
+
+.search-form > button{
+  background-color: var(--primary);
+  border: none;
+  color: white;
+  font-size: 1.1rem; 
+  padding: 10px 14px;
+}
+
+.modal-background{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+ background-color: transparent;
+}
+
+.noFound{   
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  ;
+  justify-content: center;
+
+ 
+}
+
+.noFound > img{
+  width: 250px;
+  height: 200px;
 }

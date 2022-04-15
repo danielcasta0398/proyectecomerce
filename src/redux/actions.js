@@ -9,7 +9,8 @@ export const actions = {
     setProducts: "ADD_PRODUCTS",
     setProduct: 'SET_PRODUCT',
     setIsLoading: 'SET_IS_LAODING',
-    setIsModalLogin: 'SET_IS_MODAL_LOGIN'
+    setIsModalLogin: 'SET_IS_MODAL_LOGIN',
+    setCategories: 'SET_CATEGORIES'
 
 }
 
@@ -33,6 +34,11 @@ export const setIsModalLogin = isModalLogin =>({
     payload: isModalLogin
 })
 
+export const setCategories = categories =>({
+    type: actions.setCategories,
+    payload: categories
+})
+
 
 export const getProductsThunk = () =>{
    return dispatch => {
@@ -43,6 +49,16 @@ export const getProductsThunk = () =>{
    }
 }
 
+export const getFilterThunk = search =>{
+    return dispatch => {
+     dispatch( setIsLoading(true) )   
+     axios.get(`https://ecommerce-api-react.herokuapp.com/api/v1/products?query=${search}`)
+     .then( res => dispatch(setProducts(res.data.data.products)))
+     .finally ( () => dispatch(setIsLoading(false)) )
+    }
+ }
+ 
+
 export const getProductsInfoThunk = id =>{
     return dispatch => {
      dispatch( setIsLoading(true) )   
@@ -51,3 +67,12 @@ export const getProductsInfoThunk = id =>{
      .finally ( () => dispatch(setIsLoading(false)) )
     }
  }
+
+ export const getCategoriesThunk = () =>{
+    return dispatch => {
+        dispatch( setIsLoading(true) )   
+        axios.get(`https://ecommerce-api-react.herokuapp.com/api/v1/products/categories`)
+        .then( res => dispatch(setCategories(res.data.data.categories)))
+        .finally ( () => dispatch(setIsLoading(false)) )
+       }
+ } 

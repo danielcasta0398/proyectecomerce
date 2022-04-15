@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import CardProducts from '../components/CardProducts';
 import Header from '../components/Header';
-import {  getProductsThunk } from '../redux/actions';
+import {  getCategoriesThunk, getProductsThunk } from '../redux/actions';
 
 const Home = () => {
 
@@ -10,13 +10,22 @@ const Home = () => {
     
 
     useEffect( () => {
-        dispatch( getProductsThunk() )         
+        dispatch( getProductsThunk() );
+        dispatch( getCategoriesThunk() )      
+        
+
     }, [ dispatch ])
+
+    const categories = useSelector( state => state.categories )  
+
+   
+    
 
     return (            
         <div>
-            <Header />  
+            <Header />                     
             <div className='content-product'>
+            
              <CardProducts />
             </div>          
             

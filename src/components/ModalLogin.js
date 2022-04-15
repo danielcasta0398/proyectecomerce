@@ -5,10 +5,11 @@ import '../styles/modal.css'
 
 const ModalLogin = () => {
 
+
     const loginUser = () =>{
         return(
           <>  
-            <form action="">  
+            <form action="" className='form-modal '>  
             
             <div>
             <label htmlFor="email">Email</label>
@@ -37,7 +38,7 @@ const ModalLogin = () => {
     const signUser = () =>{
         return(
            <> 
-            <form action="">  
+            <form action="" className='form-modal '>  
             
             <div>
             <label htmlFor="email">Email</label>
@@ -88,12 +89,14 @@ const ModalLogin = () => {
     const [ login, setLogin ] = useState(true)
     
     return (
-        <div className='modal'>
-           <div className="user"><i className="fa-solid fa-circle-user"></i></div>
-           { 
-              login ? loginUser() : signUser()
-           }
-           
+        <div className="modal-background" >
+            <div className='modal'>
+            <div className="user"><i className="fa-solid fa-circle-user"></i></div>
+            { 
+                login ? loginUser() : signUser()
+            }
+            
+            </div>
         </div>
     );
 };

@@ -30,7 +30,7 @@ img{
     align-items: center;
 }
 
-.buttons button{
+.buttons > button{
     background: var(--primary);
     border-radius: 50%;
     color: #fff;
