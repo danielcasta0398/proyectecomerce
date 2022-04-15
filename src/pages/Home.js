@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import CardProducts from '../components/CardProducts';
 import Header from '../components/Header';
 import {  getCategoriesThunk, getProductsThunk } from '../redux/actions';
