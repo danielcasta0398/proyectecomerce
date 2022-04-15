@@ -14,12 +14,9 @@ const Home = () => {
         dispatch( getCategoriesThunk() )      
         
 
-    }, [ dispatch ])
+    }, [ dispatch ])  
 
-    const categories = useSelector( state => state.categories )  
-
-   
-    
+       
 
     return (            
         <div>
