@@ -17,10 +17,9 @@ const Home = () => {
     }, [ dispatch ])  
 
        
-
     return (            
         <div>
-            <Header />                     
+            <Header/>                         
             <div className='content-product'>
             
              <CardProducts />
